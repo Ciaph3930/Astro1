@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const { pageTitle } = Astro.props;
 const finished = false;
 const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
